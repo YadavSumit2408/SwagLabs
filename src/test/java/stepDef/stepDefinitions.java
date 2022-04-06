@@ -45,20 +45,20 @@ public class stepDefinitions extends base {
         driver.quit();
     }
 
-    @Then("Verify that user is unable to log in")
-    public void verify_that_user_is_unable_to_log_in() {
-        // Write code here that turns the phrase above into concrete actions
-        boolean flag = true;
-        String a = "";
-        String b = "";
-        String c = "";
-        if(a==driver.findElement(By.xpath("//*[@data-test='error']")).getText()
-                || b == driver.findElement(By.xpath("//*[@data-test='error']")).getText() ||
-                c == driver.findElement(By.xpath("//*[@data-test='error']")).getText()){
-            flag=false;
-        }
-        Assert.assertFalse(flag);
-    }
+//    @Then("Verify that user is unable to log in")
+//    public void verify_that_user_is_unable_to_log_in() {
+//        // Write code here that turns the phrase above into concrete actions
+//        boolean flag = true;
+//        String a = "Epic sadface: Username is required";
+//        String b = "Epic sadface: Password is required";
+//        String c = "Epic sadface: Username and password do not match any user in this service";
+//        if(a==driver.findElement(By.xpath("//*[@data-test='error']")).getText()
+//                || b == driver.findElement(By.xpath("//*[@data-test='error']")).getText() ||
+//                c == driver.findElement(By.xpath("//*[@data-test='error']")).getText()){
+//            flag=false;
+//        }
+//        Assert.assertFalse(flag);
+//    }
 
 
 }

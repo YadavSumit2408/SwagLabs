@@ -2,6 +2,7 @@ package resource;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
@@ -22,10 +23,13 @@ public class base {
         String browserName=prop.getProperty("browser");
         System.out.println(browserName);
 
-        if(browserName.equals("chrome"))
+        if(browserName.equals("edge"))
         {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\SIBANSAL\\OneDrive - Capgemini\\Desktop\\chromedriver_win32\\chromedriver.exe");
-            driver= new ChromeDriver();
+            System.setProperty("webdriver.edge.driver",
+                    "C:\\Users\\sumityad\\eclipse-workspace\\SwagLabs\\src\\main\\resources\\msedgedriver.exe");
+
+            driver = new EdgeDriver();
+
             //execute in chrome driver
 
         }
